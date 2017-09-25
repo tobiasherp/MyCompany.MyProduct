@@ -1,0 +1,36 @@
+<metal:block metal:define-macro="css">
+    <tal:block tal:define="dummy python:request.set('disable_border',1)" />
+</metal:block>
+
+<metal:block metal:define-macro="body"
+            tal:define="transform nocall:here/@@transform;
+                        dummy here/@@authorized/raiseAnon;">
+
+        <div class="span9">
+            <div class="row">
+                <div id="jq-load-content-actions" class="jq-load ">
+                    <!-- -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+        
+        <div class="area-title">
+            <h1 tal:content="structure here/Title"/>
+        </div>
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+        <div class="area-content">
+            <div class="well"
+                 tal:define="text here/Description"
+                 tal:condition="text">
+                <div class="well-content">
+                    <p tal:content="text"/>
+                </div>
+            </div>
+            <div class="page" tal:content="structure python:transform.get(here.getText())"></div>
+        </div>
+        <div class="clear"></div>
+
+</metal:block>

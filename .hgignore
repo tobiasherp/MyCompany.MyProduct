@@ -1,0 +1,7 @@
+syntax: glob
+.git
+.svn
+*.pyc
+*~
+*.egg-info
+auto.msg

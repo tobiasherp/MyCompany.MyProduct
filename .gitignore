@@ -1,0 +1,5 @@
+MyCompany.MyProduct.egg-info
+*.pyc
+.svn
+.hg
+auto.msg

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="MyCompany.MyProduct">
+
+    <i18n:registerTranslations directory="locales" />
+
+    <includeDependencies package="." />
+
+    <include file="profiles.zcml" />
+    <include package=".browser" />
+    <five:registerPackage package="." initialize=".initialize"/>
+    <!-- see (gf):
+	 browser/__init__.py
+	 profiles/default/skins.xml
+      -->
+    <cmf:registerDirectory
+	name="skins"
+	directory="skins"
+	recursive="True" />
+
+    <browser:resourceDirectory
+	name="myproduct"
+	directory="resource"
+	/>
+
+    <utility
+	factory=".setuphandlers.HiddenProfiles"
+	name="MyCompany.MyProduct-hiddenprofiles" />
+
+</configure>

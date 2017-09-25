@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<rolemap>
+  <roles>
+    <role name="MyAuthor"/>
+  </roles>
+  <permissions>
+    <permission name="MyCompany.MyProduct: Add MyType" acquire="True">
+      <role name="MyAuthor"/>
+      <role name="Manager"/>
+    </permission>
+  </permissions>
+</rolemap>

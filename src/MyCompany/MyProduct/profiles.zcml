@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="unitracc">
+
+  <include package="Products.GenericSetup" file="meta.zcml" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="MyCompany.MyProduct"
+      directory="profiles/default"
+      description="Installs the MyCompany.MyProduct add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- probably not yet supported:
+      post_handler=".setuphandlers.post_install"
+
+    ConfigurationError: ('Unrecognized parameters:', 'post_handler')
+    -->
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="MyCompany.MyProduct (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the MyCompany.MyProduct add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- probably not yet supported:
+      post_handler=".setuphandlers.uninstall"
+    -->
+
+  <!-- [ Upgrade steps ... [
+       - update target version in ./profiles/default/metadata.xml!
+       - Code in ./setuphandlers.py
+    -->
+  <genericsetup:upgradeStep
+      title="MyProduct site layout, step 1"
+      description="Add new folders and pages"
+      source="1000"
+      destination="1001"
+      handler=".setuphandlers.update_site_structure_1001"
+      profile="MyCompany.MyProduct:default"
+      />
+  <!-- ] ... Upgrade steps ] -->
+
+</configure>

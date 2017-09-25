@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>View &ldquo;myview&rdquo; of product &ldquo;MyCompany.MyProduct&rdquo;</title>
+<link rel="stylesheet" type="text/css" href="/++resource++myproduct/mystyles.css">
+</head>
+<body>
+<h1>
+The skin <em>(MyCompany.MyProduct)</em> <tt>myskin</tt> was found!
+</h1>
+</body>
+</html>

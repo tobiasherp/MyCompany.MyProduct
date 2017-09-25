@@ -1,0 +1,5 @@
+====================
+MyCompany.MyProduct
+====================
+
+User documentation
