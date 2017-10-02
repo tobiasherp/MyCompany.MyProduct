@@ -29,10 +29,9 @@ MyType_schema = (
     )
 
 
-basecls = (# MyBase,   # (add later, after solution for factory problem)
-           ATCTContent,
-           )
-class MyType(*basecls):
+class MyType(# MyBase,   # (add later, after solution for factory problem)
+             ATCTContent,
+             ):
     """
     My content type which appears in the types tool,
     but currently can't be added
