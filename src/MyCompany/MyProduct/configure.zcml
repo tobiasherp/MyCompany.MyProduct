@@ -14,6 +14,7 @@
 
     <include file="profiles.zcml" />
     <include package=".browser" />
+    <include package=".content" />
     <five:registerPackage package="." initialize=".initialize"/>
     <!-- see (gf):
 	 browser/__init__.py

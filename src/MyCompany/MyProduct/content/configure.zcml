@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="MyCompany.MyProduct">
+
+  <class class=".mytype.MyType">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IMyType"
+        />
+  </class>
+
+</configure>
