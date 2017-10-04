@@ -12,13 +12,13 @@
  <property name="content_meta_type">MyType</property>
  <property name="product">MyCompany.MyProduct</property>
  <property name="factory">addMyType</property>
- <property name="immediate_view">mytype_view</property>
+ <property name="immediate_view">base_view</property>
  <property name="global_allow">True</property>
  <property name="filter_content_types">False</property>
  <property name="allowed_content_types">
  </property>
  <property name="allow_discussion">False</property>
- <property name="default_view">mytype_view</property>
+ <property name="default_view">base_view</property>
  <property name="view_methods">
   <element value="base_view"/>
  </property>
