@@ -3,7 +3,7 @@
 </metal:block>
 
 <metal:block metal:define-macro="body"
-            tal:define="transform nocall:here/@@transform;
+            tal:define="
                         dummy here/@@authorized/raiseAnon;">
 
         <div class="span9">
@@ -29,7 +29,7 @@
                     <p tal:content="text"/>
                 </div>
             </div>
-            <div class="page" tal:content="structure python:transform.get(here.getText())"></div>
+            <div class="page" tal:content="structure python:here.getText()"></div>
         </div>
         <div class="clear"></div>
 
