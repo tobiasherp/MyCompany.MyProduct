@@ -29,7 +29,10 @@
                     <p tal:content="text"/>
                 </div>
             </div>
-            <div class="page" tal:content="structure python:here.getText()"></div>
+            <div class="page"
+                 tal:define="text here/text | nothing"
+                 tal:condition="text"
+                 tal:content="structure text"></div>
         </div>
         <div class="clear"></div>
 
