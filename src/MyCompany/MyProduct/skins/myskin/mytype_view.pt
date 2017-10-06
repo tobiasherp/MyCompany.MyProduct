@@ -3,7 +3,7 @@
 </metal:block>
 
 <metal:block metal:define-macro="body"
-            tal:define="
+            tal:define="view context/@@plone;
                         dummy here/@@authorized/raiseAnon;">
 
         <div class="span9">
